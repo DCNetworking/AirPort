@@ -7,8 +7,8 @@ namespace AirPort.AirPort;
 public class AirPortManager
 {
 	private readonly List<AirPort> AirPortsList;
-	readonly Lazy<AirPortManager> airPortManager = new(() => new AirPortManager());
-	public AirPortManager Init
+	readonly static Lazy<AirPortManager> airPortManager = new(() => new AirPortManager());
+	public static AirPortManager Init
 	{
 		get => airPortManager.Value;
 	}

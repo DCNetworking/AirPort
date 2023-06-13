@@ -1,1 +1,5 @@
-﻿System.Console.WriteLine("Hello World");
+﻿using AirPort.AirPlane;
+using AirPort.AirPort;
+
+AirPortManager apm = AirPortManager.Init;
+
