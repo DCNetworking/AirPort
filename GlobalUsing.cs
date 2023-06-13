@@ -1,2 +1,2 @@
-global using AirPort.AirPlane;
-global using AirPort.AirPort;
+global using AirPortSchdeuler.AirPlane;
+global using AirPortSchdeuler.AirPort;

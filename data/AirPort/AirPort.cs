@@ -1,4 +1,7 @@
-﻿namespace AirPortSchdeuler.AirPort;
+﻿using System.Runtime.Serialization;
+using System.Text;
+using System;
+namespace AirPortSchdeuler.AirPort;
 public class AirPort
 {
 	public AirPortCode AirPortCode { get; set; }
@@ -9,7 +12,7 @@ public class AirPort
 	public string? TimeZone { get; set; }
 	public override string ToString()
 	{
-		return $"({AirPortCode}) | {City} | {Country} | {Name}";
+		return $"({AirPortCode}) - {City,-12} {Country,-15} '{Name}'";
 	}
 }
 

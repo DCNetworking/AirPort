@@ -166,6 +166,7 @@ public class AirPortManager
 					TimeZone = "Australia/Sydney"
 				}
 			};
+		AirPortsList = AirPortsList.OrderBy(p => p.Country).ThenBy(p => p.City).ToList();
 	}
 }
 

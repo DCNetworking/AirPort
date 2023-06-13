@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/damiancabon/Kod/AirPlane/AirPort/AirPort.csproj",
-      "projectName": "AirPort",
-      "projectPath": "/Users/damiancabon/Kod/AirPlane/AirPort/AirPort.csproj",
+      "projectUniqueName": "/Users/damiancabon/Kod/AirPlane/AirPortSchdeuler/AirPortSchdeuler.csproj",
+      "projectName": "AirPortSchdeuler",
+      "projectPath": "/Users/damiancabon/Kod/AirPlane/AirPortSchdeuler/AirPortSchdeuler.csproj",
       "packagesPath": "/Users/damiancabon/.nuget/packages/",
-      "outputPath": "/Users/damiancabon/Kod/AirPlane/AirPort/obj/",
+      "outputPath": "/Users/damiancabon/Kod/AirPlane/AirPortSchdeuler/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/damiancabon/.nuget/NuGet/NuGet.Config"
