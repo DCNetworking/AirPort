@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace AirPort.AirPort;
+namespace AirPortSchdeuler.AirPort;
 public class AirPortManager
 {
 	private readonly List<AirPort> AirPortsList;
@@ -11,6 +11,11 @@ public class AirPortManager
 	public static AirPortManager Init
 	{
 		get => airPortManager.Value;
+	}
+
+	public List<AirPort> GetAirPorts()
+	{
+		return AirPortsList;
 	}
 	private AirPortManager()
 	{

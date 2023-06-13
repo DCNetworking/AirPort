@@ -1,4 +1,4 @@
-﻿namespace AirPort.AirPort;
+﻿namespace AirPortSchdeuler.AirPort;
 public enum AirPortCode
 {
     BHX, // Birmingham Airport

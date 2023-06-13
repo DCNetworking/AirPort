@@ -1,4 +1,4 @@
-namespace AirPort.AirPlane;
+namespace AirPortSchdeuler.AirPlane;
 public enum AirPlaneType
 {
     CessnaCitation,

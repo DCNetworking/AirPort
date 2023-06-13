@@ -1,4 +1,4 @@
-﻿namespace AirPort.AirPort;
+﻿namespace AirPortSchdeuler.AirPort;
 public class AirPort
 {
 	public AirPortCode AirPortCode { get; set; }
