@@ -1,7 +1,14 @@
-﻿
-AirPortManager apm = AirPortManager.Init;
-var airPorts = apm.GetAirPorts();
-foreach (AirPort airPort in airPorts)
+﻿#if DEBUG
+IRepository repo = new DevRepository();
+#else
+IRepository repo = new Repository();
+#endif
+
+var Mexico = repo.GetAirport(AirPortCode.MEX);
+var allWithLetterA = repo.GetAirport("united");
+System.Console.WriteLine(Mexico.ToString());
+
+foreach (AirPort airport in allWithLetterA)
 {
-    System.Console.WriteLine(airPort.ToString());
+	System.Console.WriteLine(airport.ToString());
 }

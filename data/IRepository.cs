@@ -5,8 +5,10 @@ using System.Threading.Tasks;
 
 namespace AirPortSchdeuler.data
 {
-    public interface IRepository
-    {
-        
-    }
+
+	public interface IRepository
+	{
+		List<AirPort> GetAirport(string value);
+		AirPort GetAirport(AirPortCode airportCode);
+	}
 }

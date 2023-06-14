@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace AirPortSchdeuler.AirPlane;
+namespace AirPortSchdeuler.data;
 
 public class AirPlane
 {

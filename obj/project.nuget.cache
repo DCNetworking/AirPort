@@ -1,8 +1,20 @@
 {
   "version": 2,
-  "dgSpecHash": "RYXp5NvjeMRo10aCdgd51VsEV/DTdCfDNoi3mkfmXCUKVTqsf8Ovg1GjIWuwrG9+h6VNARUnjw4es87YU9H0BA==",
+  "dgSpecHash": "ez7iw/fkNKfpUuTpN8Kq3tqBEnrpkxze1HG4v3ZcR9YFYRMBW3OJZkkLteAzKWzDmMMz2tn1WAVaqQrWWlPYgg==",
   "success": true,
   "projectFilePath": "/Users/damiancabon/Kod/AirPlane/AirPortSchdeuler/AirPortSchdeuler.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/damiancabon/.nuget/packages/microsoft.entityframeworkcore/7.0.7/microsoft.entityframeworkcore.7.0.7.nupkg.sha512",
+    "/Users/damiancabon/.nuget/packages/microsoft.entityframeworkcore.abstractions/7.0.7/microsoft.entityframeworkcore.abstractions.7.0.7.nupkg.sha512",
+    "/Users/damiancabon/.nuget/packages/microsoft.entityframeworkcore.analyzers/7.0.7/microsoft.entityframeworkcore.analyzers.7.0.7.nupkg.sha512",
+    "/Users/damiancabon/.nuget/packages/microsoft.extensions.caching.abstractions/7.0.0/microsoft.extensions.caching.abstractions.7.0.0.nupkg.sha512",
+    "/Users/damiancabon/.nuget/packages/microsoft.extensions.caching.memory/7.0.0/microsoft.extensions.caching.memory.7.0.0.nupkg.sha512",
+    "/Users/damiancabon/.nuget/packages/microsoft.extensions.dependencyinjection/7.0.0/microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
+    "/Users/damiancabon/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/7.0.0/microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
+    "/Users/damiancabon/.nuget/packages/microsoft.extensions.logging/7.0.0/microsoft.extensions.logging.7.0.0.nupkg.sha512",
+    "/Users/damiancabon/.nuget/packages/microsoft.extensions.logging.abstractions/7.0.0/microsoft.extensions.logging.abstractions.7.0.0.nupkg.sha512",
+    "/Users/damiancabon/.nuget/packages/microsoft.extensions.options/7.0.0/microsoft.extensions.options.7.0.0.nupkg.sha512",
+    "/Users/damiancabon/.nuget/packages/microsoft.extensions.primitives/7.0.0/microsoft.extensions.primitives.7.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
