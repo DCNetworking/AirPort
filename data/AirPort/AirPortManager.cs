@@ -50,8 +50,8 @@ public class AirPortManager
 				Country = "Germany",
 				Name = "Frankfurt Airport",
 				TimeZone = "Europe/Berlin",
-				Latitude = 50.0349M,
-				Longitude = 8.5705M
+				Latitude = 50.0530018M,
+				Longitude = 8.5703726M
 			},
 			new AirPort
 			{
@@ -140,8 +140,8 @@ public class AirPortManager
 				Country = "United States",
 				Name = "Los Angeles International Airport",
 				TimeZone = "America/Los_Angeles",
-				Latitude = 33.9416M,
-				Longitude = -118.4085M
+				Latitude = 34.05223M,
+				Longitude =  -118.24368M
 			},
 			new AirPort
 			{
