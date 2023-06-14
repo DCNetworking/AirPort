@@ -2,7 +2,7 @@
 using System.Text;
 using System;
 namespace AirPortSchdeuler.data;
-public class AirPort
+public class AirPort : IGeometrical
 {
 	public AirPortCode AirPortCode { get; set; }
 	public int AirPortCodeId => (int)AirPortCode;
