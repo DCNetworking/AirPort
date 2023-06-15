@@ -21,6 +21,12 @@ namespace AirPortSchdeuler.data
 			.GetAll()
 			.FirstOrDefault(ap => ap.AirPortCode == airportCode, new AirPort());
 		}
+		public AirPlane GetAirplane(AirPlaneType airplaneType)
+		{
+			return _ctx.airPlaneManager
+			.GetAll()
+			.FirstOrDefault(ap => ap.Type == airplaneType, new AirPlane());
+		}
 		public List<AirPort> GetAirport(string fragment)
 		{
 			fragment = fragment.ToLower();
@@ -28,6 +34,15 @@ namespace AirPortSchdeuler.data
 			.GetAll()
 			.Where(ap => ap.ToString().ToLower().Contains(fragment))
 			.ToList();
+		}
+
+		public AirPlane GetAirplaneToFlight(Flight flight)
+		{
+			var result = _ctx.airPlaneManager
+			.GetAll()
+			.Where(airPlane => flight.DistanceKM / airPlane.MaxSpeed * airPlane.FuelWeightKgUsage1H < (airPlane.FuelWeightKgTankCapacity * (1 - AirPlane.LandingFuelReserve)))
+			.OrderBy(airPlane => flight.DistanceKM / airPlane.MaxSpeed * airPlane.FuelWeightKgUsage1H);
+			return result.FirstOrDefault();
 		}
 	}
 }

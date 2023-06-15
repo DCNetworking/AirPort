@@ -7,6 +7,7 @@ namespace AirPortSchdeuler.data;
 
 public class AirPlane
 {
+	public static readonly decimal LandingFuelReserve = 0.30M;
 	public AirPlaneType Type { get; set; }
 	public int TypeId => (int)Type;
 	public string? Name { get; set; }

@@ -10,5 +10,7 @@ namespace AirPortSchdeuler.data
 	{
 		List<AirPort> GetAirport(string value);
 		AirPort GetAirport(AirPortCode airportCode);
+		AirPlane GetAirplane(AirPlaneType airplaneType);
+		AirPlane GetAirplaneToFlight(Flight flight);
 	}
 }

@@ -13,7 +13,10 @@ public class AirPlaneManager
 	{
 		get => airPlaneManager.Value;
 	}
-
+	public List<AirPlane> GetAll()
+	{
+		return AirPlaneList;
+	}
 	private AirPlaneManager()
 	{
 		AirPlaneList = new()
