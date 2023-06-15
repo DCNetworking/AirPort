@@ -1,5 +1,4 @@
 ﻿#if DEBUG
-using System.Data;
 IRepository repo = new DevRepository();
 #else
 IRepository repo = new Repository();
