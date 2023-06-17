@@ -6,14 +6,16 @@ using Microsoft.EntityFrameworkCore;
 
 namespace AirPortSchdeuler.data
 {
-	public class APContext : DbContext
-	{
-		public AirPlaneManager airPlaneManager;
-		public AirPortManager airPortManager;
-		public APContext()
-		{
-			airPlaneManager = AirPlaneManager.Init;
-			airPortManager = AirPortManager.Init;
-		}
-	}
+    public class APContext : DbContext
+    {
+        public AirPlaneManager airPlaneManager;
+        public AirPortManager airPortManager;
+        public FlightsManager flightsManager;
+        public APContext()
+        {
+            airPlaneManager = AirPlaneManager.Init;
+            airPortManager = AirPortManager.Init;
+            flightsManager = FlightsManager.Init;
+        }
+    }
 }
