@@ -25,7 +25,7 @@ namespace AirPortSchdeuler.services
 			}
 			return 0;
 		}
-		private static double DegreesToRadians(decimal degrees)
+		public static double DegreesToRadians(decimal degrees)
 		{
 			return (double)degrees * Math.PI / 180;
 		}

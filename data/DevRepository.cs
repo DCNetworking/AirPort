@@ -9,10 +9,10 @@ namespace AirPortSchdeuler.data
 {
 	public class DevRepository : IRepository
 	{
-		private APContext _ctx;
+		private readonly APContext _ctx;
 		public DevRepository()
 		{
-			System.Console.WriteLine($"Init from {this.GetType().Name}");
+			Console.WriteLine($"Init from {this.GetType().Name}");
 			_ctx = new APContext();
 		}
 		public AirPort GetAirport(AirPortCode airportCode)
@@ -39,9 +39,10 @@ namespace AirPortSchdeuler.data
 		{
 			var result = _ctx.airPlaneManager
 			.GetAll()
-			.Where(airPlane => (flight.DistanceKM / airPlane.MaxSpeed * airPlane.FuelWeightKgUsage1H) < (airPlane.FuelWeightKgTankCapacity * (1 - AirPlane.LandingFuelReserve)))
-			.OrderBy(airPlane => flight.DistanceKM / airPlane.MaxSpeed * airPlane.FuelWeightKgUsage1H);
+			.Where(airPlane => FlightService.CalcIsAcceptablePlanesToFlight(flight, airPlane))
+			.OrderBy(airPlane => { return FlightService.CostPerPassenger(flight, airPlane); });
 			return result.FirstOrDefault();
 		}
+
 	}
 }

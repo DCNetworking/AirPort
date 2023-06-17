@@ -14,9 +14,16 @@ IRepository repo = new Repository();
 // }
 
 Flight flight = new(
-		repo.GetAirport(AirPortCode.CAN),
-		DateTime.Now,
 		repo.GetAirport(AirPortCode.LAX),
+		DateTime.Now,
+		repo.GetAirport(AirPortCode.FRA),
+		repo
+		);
+Flight flight2 = new(
+		repo.GetAirport(AirPortCode.FRA),
+		flight.ArrivalDateTime.AddHours(1),
+		repo.GetAirport(AirPortCode.SYD),
 		repo
 		);
 Console.WriteLine(flight.ToString());
+Console.WriteLine(flight2.ToString());

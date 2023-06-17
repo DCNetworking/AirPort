@@ -28,7 +28,8 @@ public class AirPlaneManager
 				Producer = "Airbus",
 				MaxSpeed = 514,
 				FuelWeightKgUsage1H = 2_800,
-				FuelWeightKgTankCapacity = 23_860
+				FuelWeightKgTankCapacity = 23_860,
+				PassengersCapacity = 180
 			},
 			new AirPlane
 			{
@@ -37,7 +38,8 @@ public class AirPlaneManager
 				Producer = "Airbus",
 				MaxSpeed = 1004,
 				FuelWeightKgUsage1H = 8_000,
-				FuelWeightKgTankCapacity = 97_530
+				FuelWeightKgTankCapacity = 97_530,
+				PassengersCapacity = 300,
 			},
 			new AirPlane
 			{
@@ -46,7 +48,8 @@ public class AirPlaneManager
 				Producer = "Airbus",
 				MaxSpeed = 1049,
 				FuelWeightKgUsage1H = 6_500,
-				FuelWeightKgTankCapacity = 138_000
+				FuelWeightKgTankCapacity = 138_000,
+				PassengersCapacity = 440,
 			},
 			new AirPlane
 			{
@@ -55,7 +58,8 @@ public class AirPlaneManager
 				Producer = "Airbus",
 				MaxSpeed = 1020,
 				FuelWeightKgUsage1H = 14_000,
-				FuelWeightKgTankCapacity = 320_000
+				FuelWeightKgTankCapacity = 320_000,
+				PassengersCapacity = 853,
 			},
 			new AirPlane
 			{
@@ -64,7 +68,8 @@ public class AirPlaneManager
 				Producer = "Boeing",
 				MaxSpeed = 952,
 				FuelWeightKgUsage1H = 2_800,
-				FuelWeightKgTankCapacity = 22_830
+				FuelWeightKgTankCapacity = 22_830,
+				PassengersCapacity = 215,
 			},
 			new AirPlane
 			{
@@ -73,7 +78,8 @@ public class AirPlaneManager
 				Producer = "Boeing",
 				MaxSpeed = 1047,
 				FuelWeightKgUsage1H = 13_000,
-				FuelWeightKgTankCapacity = 216_840
+				FuelWeightKgTankCapacity = 216_840,
+				PassengersCapacity = 660,
 			},
 			new AirPlane
 			{
@@ -82,7 +88,8 @@ public class AirPlaneManager
 				Producer = "Boeing",
 				MaxSpeed = 952,
 				FuelWeightKgUsage1H = 4_000,
-				FuelWeightKgTankCapacity = 43_490
+				FuelWeightKgTankCapacity = 43_490,
+				PassengersCapacity = 239,
 			},
 			new AirPlane
 			{
@@ -91,7 +98,8 @@ public class AirPlaneManager
 				Producer = "Boeing",
 				MaxSpeed = 871,
 				FuelWeightKgUsage1H = 5_000,
-				FuelWeightKgTankCapacity = 91_760
+				FuelWeightKgTankCapacity = 91_760,
+				PassengersCapacity = 375,
 			},
 			new AirPlane
 			{
@@ -100,7 +108,8 @@ public class AirPlaneManager
 				Producer = "Boeing",
 				MaxSpeed = 950,
 				FuelWeightKgUsage1H = 10_000,
-				FuelWeightKgTankCapacity = 171_170
+				FuelWeightKgTankCapacity = 171_170,
+				PassengersCapacity = 396
 			},
 			new AirPlane
 			{
@@ -109,7 +118,8 @@ public class AirPlaneManager
 				Producer = "Embraer",
 				MaxSpeed = 863,
 				FuelWeightKgUsage1H = 1_800,
-				FuelWeightKgTankCapacity = 11_340
+				FuelWeightKgTankCapacity = 11_340,
+				PassengersCapacity = 114,
 			},
 			new AirPlane
 			{
@@ -118,7 +128,8 @@ public class AirPlaneManager
 				Producer = "Bombardier",
 				MaxSpeed = 828,
 				FuelWeightKgUsage1H = 2_500,
-				FuelWeightKgTankCapacity = 18_550
+				FuelWeightKgTankCapacity = 18_550,
+				PassengersCapacity = 90,
 			},
 			new AirPlane
 			{
@@ -127,7 +138,8 @@ public class AirPlaneManager
 				Producer = "ATR",
 				MaxSpeed = 511,
 				FuelWeightKgUsage1H = 1_200,
-				FuelWeightKgTankCapacity = 7_400
+				FuelWeightKgTankCapacity = 7_400,
+				PassengersCapacity = 78,
 			},
 			new AirPlane
 			{
@@ -136,7 +148,8 @@ public class AirPlaneManager
 				Producer = "Cessna",
 				MaxSpeed = 882,
 				FuelWeightKgUsage1H = 500,
-				FuelWeightKgTankCapacity = 2_500
+				FuelWeightKgTankCapacity = 2_500,
+				PassengersCapacity = 12
 			},
 			new AirPlane
 			{
@@ -145,7 +158,8 @@ public class AirPlaneManager
 				Producer = "Dassault",
 				MaxSpeed = 892,
 				FuelWeightKgUsage1H = 2_000,
-				FuelWeightKgTankCapacity = 13_000
+				FuelWeightKgTankCapacity = 13_000,
+				PassengersCapacity = 20
 			},
 			new AirPlane
 			{
@@ -154,7 +168,8 @@ public class AirPlaneManager
 				Producer = "Gulfstream",
 				MaxSpeed = 1040,
 				FuelWeightKgUsage1H = 4_500,
-				FuelWeightKgTankCapacity = 35_000
+				FuelWeightKgTankCapacity = 35_000,
+				PassengersCapacity = 18
 			},
 			new AirPlane
 			{
@@ -163,7 +178,8 @@ public class AirPlaneManager
 				Producer = "McDonnell Douglas",
 				MaxSpeed = 982,
 				FuelWeightKgUsage1H = 4_000,
-				FuelWeightKgTankCapacity = 26_000
+				FuelWeightKgTankCapacity = 26_000,
+				PassengersCapacity = 172
 			},
 			new AirPlane
 			{
@@ -172,7 +188,8 @@ public class AirPlaneManager
 				Producer = "Sukhoi",
 				MaxSpeed = 952,
 				FuelWeightKgUsage1H = 2_200,
-				FuelWeightKgTankCapacity = 15_000
+				FuelWeightKgTankCapacity = 15_000,
+				PassengersCapacity = 108
 			},
 			new AirPlane
 			{
@@ -181,7 +198,8 @@ public class AirPlaneManager
 				Producer = "Antonov",
 				MaxSpeed = 983,
 				FuelWeightKgUsage1H = 12_000,
-				FuelWeightKgTankCapacity = 126_000
+				FuelWeightKgTankCapacity = 126_000,
+				PassengersCapacity = 0
 			},
 			new AirPlane
 			{
@@ -190,7 +208,8 @@ public class AirPlaneManager
 				Producer = "Beechcraft",
 				MaxSpeed = 578,
 				FuelWeightKgUsage1H = 700,
-				FuelWeightKgTankCapacity = 2_400
+				FuelWeightKgTankCapacity = 2_400,
+				PassengersCapacity = 11
 			},
 			new AirPlane
 			{
@@ -199,7 +218,8 @@ public class AirPlaneManager
 				Producer = "Cessna",
 				MaxSpeed = 295,
 				FuelWeightKgUsage1H = 450,
-				FuelWeightKgTankCapacity = 1_500
+				FuelWeightKgTankCapacity = 1_500,
+				PassengersCapacity = 14
 			},
 			new AirPlane
 			{
@@ -208,7 +228,8 @@ public class AirPlaneManager
 				Producer = "Piper",
 				MaxSpeed = 237,
 				FuelWeightKgUsage1H = 300,
-				FuelWeightKgTankCapacity = 900
+				FuelWeightKgTankCapacity = 900,
+				PassengersCapacity = 4
 			},
 			new AirPlane
 			{
@@ -217,7 +238,8 @@ public class AirPlaneManager
 				Producer = "Beechcraft",
 				MaxSpeed = 374,
 				FuelWeightKgUsage1H = 400,
-				FuelWeightKgTankCapacity = 1_300
+				FuelWeightKgTankCapacity = 1_300,
+				PassengersCapacity = 6
 			},
 			new AirPlane
 			{
@@ -226,7 +248,8 @@ public class AirPlaneManager
 				Producer = "Beechcraft",
 				MaxSpeed = 326,
 				FuelWeightKgUsage1H = 350,
-				FuelWeightKgTankCapacity = 1_100
+				FuelWeightKgTankCapacity = 1_100,
+				PassengersCapacity = 6
 			},
 			new AirPlane
 			{
@@ -235,7 +258,8 @@ public class AirPlaneManager
 				Producer = "Cessna",
 				MaxSpeed = 833,
 				FuelWeightKgUsage1H = 1_800,
-				FuelWeightKgTankCapacity = 9_100
+				FuelWeightKgTankCapacity = 9_100,
+				PassengersCapacity = 12
 			},
 			new AirPlane
 			{
@@ -244,7 +268,8 @@ public class AirPlaneManager
 				Producer = "Gulfstream",
 				MaxSpeed = 903,
 				FuelWeightKgUsage1H = 3_500,
-				FuelWeightKgTankCapacity = 28_000
+				FuelWeightKgTankCapacity = 28_000,
+				PassengersCapacity = 18
 			},
 			new AirPlane
 			{
@@ -253,7 +278,8 @@ public class AirPlaneManager
 				Producer = "Bombardier",
 				MaxSpeed = 855,
 				FuelWeightKgUsage1H = 2_800,
-				FuelWeightKgTankCapacity = 17_000
+				FuelWeightKgTankCapacity = 17_000,
+				PassengersCapacity = 19
 			},
 		};
 	}

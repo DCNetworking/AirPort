@@ -34,17 +34,17 @@ namespace AirPortSchdeuler.data
 			try
 			{
 				AirPlane = repo.GetAirplaneToFlight(this);
+				double timeToAdd = (double)DistanceKM / (double)AirPlane.MaxSpeed;
+				DateTime ArrivalDateTimeWithoutTimeZone = departureTime.AddHours((double)timeToAdd);
+				TimeZoneInfo arrivalTimeZone = TimeZoneInfo.FindSystemTimeZoneById(arrival.TimeZone);
+				ArrivalDateTime = TimeZoneInfo.ConvertTime(ArrivalDateTimeWithoutTimeZone, arrivalTimeZone);
+				FlightDurationTime = (ArrivalDateTimeWithoutTimeZone - DepartureDateTimeWithoutTimeZone).ToString(@"hh\:mm");
+				Console.WriteLine(MsgService.FlightStatusMsg(FlightId, FlightStatusType));
 			}
 			catch (Exception)
 			{
 				throw new Exception(MsgService.PlaneNotFoundForFlight(DistanceKM));
 			}
-			double timeToAdd = (double)DistanceKM / (double)AirPlane.MaxSpeed;
-			DateTime ArrivalDateTimeWithoutTimeZone = departureTime.AddHours((double)timeToAdd);
-			TimeZoneInfo arrivalTimeZone = TimeZoneInfo.FindSystemTimeZoneById(arrival.TimeZone);
-			ArrivalDateTime = TimeZoneInfo.ConvertTime(ArrivalDateTimeWithoutTimeZone, arrivalTimeZone);
-			FlightDurationTime = (ArrivalDateTimeWithoutTimeZone - DepartureDateTimeWithoutTimeZone).ToString(@"hh\:mm");
-			Console.WriteLine(MsgService.FlightStatusMsg(FlightId, FlightStatusType));
 		}
 		public void SetFilghtDelay(double hours)
 		{
