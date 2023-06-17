@@ -21,49 +21,9 @@ namespace AirPortSchdeuler.data
 		[Required]
 		public string FlightDurationTime { get; private set; }
 		public FlightStatusType FlightStatusType { get; private set; }
-		public void SetFilghtDelay(double hours)
+		public Flight(AirPort departure, DateTime departureTime, AirPort arrival, IRepository repo)
 		{
-			if (FlightStatusType == FlightStatusType.Cancelled)
-			{
-				System.Console.WriteLine(MsgService.FlightCancelledMsg(FlightId));
-			}
-			else
-			{
-				FlightStatusType = FlightStatusType.Delayed;
-				System.Console.WriteLine(MsgService.FlightStatusMsg(FlightId, FlightStatusType));
-				ArrivalDateTime = ArrivalDateTime.AddHours(hours);
-				System.Console.WriteLine(MsgService.FlightArrivalTimeChange(FlightId, ArrivalDateTime));
-			}
-		}
-		public void SetFilghtCancelled()
-		{
-			if (FlightStatusType == FlightStatusType.Cancelled)
-			{
-				System.Console.WriteLine(MsgService.FlightCancelledMsg(FlightId));
-			}
-			else
-			{
-				FlightStatusType = FlightStatusType.Cancelled;
-				System.Console.WriteLine(MsgService.FlightStatusMsg(FlightId, FlightStatusType));
-				ArrivalDateTime = default;
-				System.Console.WriteLine(MsgService.FlightArrivalTimeChange(FlightId, ArrivalDateTime));
-			}
-		}
-		public decimal DistanceKM
-		{
-			get
-			{
-				if (Departure == null || Arrival == null) { return 0; }
-				return CalcHaversineDistance(Departure, Arrival);
-			}
-		}
-		public Flight(AirPort departure, DateTime departureTime, AirPort arrival)
-		{
-#if DEBUG
-			IRepository repo = new DevRepository();
-#else
-			IRepository repo = new Repository();
-#endif
+
 			FlightId = Guid.NewGuid().ToString();
 			Departure = departure;
 			DateTime DepartureDateTimeWithoutTimeZone = departureTime;
@@ -84,8 +44,45 @@ namespace AirPortSchdeuler.data
 			TimeZoneInfo arrivalTimeZone = TimeZoneInfo.FindSystemTimeZoneById(arrival.TimeZone);
 			ArrivalDateTime = TimeZoneInfo.ConvertTime(ArrivalDateTimeWithoutTimeZone, arrivalTimeZone);
 			FlightDurationTime = (ArrivalDateTimeWithoutTimeZone - DepartureDateTimeWithoutTimeZone).ToString(@"hh\:mm");
-			System.Console.WriteLine(MsgService.FlightStatusMsg(FlightId, FlightStatusType));
+			Console.WriteLine(MsgService.FlightStatusMsg(FlightId, FlightStatusType));
 		}
+		public void SetFilghtDelay(double hours)
+		{
+			if (FlightStatusType == FlightStatusType.Cancelled)
+			{
+				Console.WriteLine(MsgService.FlightCancelledMsg(FlightId));
+			}
+			else
+			{
+				FlightStatusType = FlightStatusType.Delayed;
+				Console.WriteLine(MsgService.FlightStatusMsg(FlightId, FlightStatusType));
+				ArrivalDateTime = ArrivalDateTime.AddHours(hours);
+				Console.WriteLine(MsgService.FlightArrivalTimeChange(FlightId, ArrivalDateTime));
+			}
+		}
+		public void SetFilghtCancelled()
+		{
+			if (FlightStatusType == FlightStatusType.Cancelled)
+			{
+				Console.WriteLine(MsgService.FlightCancelledMsg(FlightId));
+			}
+			else
+			{
+				FlightStatusType = FlightStatusType.Cancelled;
+				Console.WriteLine(MsgService.FlightStatusMsg(FlightId, FlightStatusType));
+				ArrivalDateTime = default;
+				Console.WriteLine(MsgService.FlightArrivalTimeChange(FlightId, ArrivalDateTime));
+			}
+		}
+		public decimal DistanceKM
+		{
+			get
+			{
+				if (Departure == null || Arrival == null) { return 0; }
+				return CalcHaversineDistance(Departure, Arrival);
+			}
+		}
+
 		public override string ToString()
 		{
 			return $"Flight ID : {FlightId}\nDEPARTURE : ({Departure.AirPortCode} - {Departure.City}) {DepartureTime:yyyy-MM-d HH:mm}\nARRIVAL   : ({Arrival.AirPortCode} - {Arrival.City}) {ArrivalDateTime,-15:yyyy-MM-dd HH:mm}\nDISTANCE {DistanceKM} KM\nDURATION TIME {FlightDurationTime}\nPlane {AirPlane.Name}";

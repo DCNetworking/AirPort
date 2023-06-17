@@ -14,11 +14,9 @@ IRepository repo = new Repository();
 // }
 
 Flight flight = new(
-		repo.GetAirport(AirPortCode.LAX),
+		repo.GetAirport(AirPortCode.CAN),
 		DateTime.Now,
-		repo.GetAirport(AirPortCode.SYD)
+		repo.GetAirport(AirPortCode.LAX),
+		repo
 		);
 Console.WriteLine(flight.ToString());
-flight.SetFilghtDelay(2.5);
-flight.SetFilghtDelay(2.5);
-flight.SetFilghtDelay(2.5);
