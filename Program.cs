@@ -5,8 +5,8 @@ IRepository repo = new Repository();
 #endif
 
 
-var flightsSchedule = repo.GetAllFlights();
-foreach (Flight flight in flightsSchedule)
+List<Flight> findFlight = repo.GetFlight(new FlightSearchDto(repo.GetAirport(AirPortCode.BKK), DateTime.Now, repo.GetAirport(AirPortCode.CAN), DateTime.Now));
+foreach (Flight flight in findFlight)
 {
-    Console.WriteLine($"{flight.FlightId} from {flight.Departure.City} ({flight.Departure.AirPortCode}) to {flight.Arrival.City} ({flight.Arrival.AirPortCode})");
+	System.Console.WriteLine(flight.ToString());
 }

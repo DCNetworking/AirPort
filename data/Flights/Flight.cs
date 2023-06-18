@@ -11,7 +11,7 @@ namespace AirPortSchdeuler.data
         [Required]
         public AirPort? Departure { get; private set; }
         [Required]
-        public DateTime DepartureTime { get; private set; }
+        public DateTime DepartureDateTime { get; private set; }
         [Required]
         public AirPort? Arrival { get; private set; }
         [Required]
@@ -21,12 +21,12 @@ namespace AirPortSchdeuler.data
         [Required]
         public string FlightDurationTime { get; private set; }
         public FlightStatusType FlightStatusType { get; private set; }
-        public Flight(AirPort departure, DateTime departureTime, AirPort arrival, RepositoryWithoutFlights repo)
+        public Flight(AirPort departure, DateTime departureDateTime, AirPort arrival, RepositoryWithoutFlights repo)
         {
             Departure = departure;
-            DateTime DepartureDateTimeWithoutTimeZone = departureTime;
+            DateTime DepartureDateTimeWithoutTimeZone = departureDateTime;
             TimeZoneInfo departureTimeZone = TimeZoneInfo.FindSystemTimeZoneById(departure.TimeZone);
-            DepartureTime = TimeZoneInfo.ConvertTime(departureTime, departureTimeZone);
+            DepartureDateTime = TimeZoneInfo.ConvertTime(departureDateTime, departureTimeZone);
             Arrival = arrival;
             FlightStatusType = FlightStatusType.Ok;
             try
@@ -34,7 +34,7 @@ namespace AirPortSchdeuler.data
                 FlightId = RenderFlightId();
                 AirPlane = repo.GetAirplaneToFlight(this);
                 double timeToAdd = (double)DistanceKM / (double)AirPlane.MaxSpeed;
-                DateTime ArrivalDateTimeWithoutTimeZone = departureTime.AddHours((double)timeToAdd);
+                DateTime ArrivalDateTimeWithoutTimeZone = departureDateTime.AddHours((double)timeToAdd);
                 TimeZoneInfo arrivalTimeZone = TimeZoneInfo.FindSystemTimeZoneById(arrival.TimeZone);
                 ArrivalDateTime = TimeZoneInfo.ConvertTime(ArrivalDateTimeWithoutTimeZone, arrivalTimeZone);
                 FlightDurationTime = (ArrivalDateTimeWithoutTimeZone - DepartureDateTimeWithoutTimeZone).ToString(@"hh\:mm");
@@ -90,7 +90,7 @@ namespace AirPortSchdeuler.data
         {
             return $"----------------------------" +
                     $"\nFlight ID : {FlightId}\n" +
-                    $"DEPARTURE : ({Departure.AirPortCode} - {Departure.City}) {DepartureTime:yyyy-MM-d HH:mm}\n" +
+                    $"DEPARTURE : ({Departure.AirPortCode} - {Departure.City}) {DepartureDateTime:yyyy-MM-d HH:mm}\n" +
                     $"ARRIVAL   : ({Arrival.AirPortCode} - {Arrival.City}) {ArrivalDateTime,-15:yyyy-MM-dd HH:mm}\n" +
                     $"DISTANCE {DistanceKM} KM\nDURATION TIME {FlightDurationTime}\n" +
                     $"Plane {AirPlane.Name}\n" +

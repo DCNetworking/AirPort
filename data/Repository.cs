@@ -9,47 +9,34 @@ namespace AirPortSchdeuler.data
     {
         private APContext _ctx;
 
-        public Repository()
-        {
-            System.Console.WriteLine($"Init from {this.GetType().Name}");
-            _ctx = new APContext();
-        }
-
-        public AirPort GetAirport(AirPortCode airportCode)
-        {
-            return _ctx.airPortManager
-            .GetAll()
-            .FirstOrDefault(ap => ap.AirPortCode == airportCode, new AirPort());
-        }
-
-        public List<AirPort> GetAirport(string fragment)
-        {
-            fragment = fragment.ToLower();
-            return _ctx.airPortManager
-            .GetAll()
-            .Where(ap => ap.ToString().ToLower().Contains(fragment))
-            .ToList();
-        }
-
         public AirPlane GetAirplane(AirPlaneType airplaneType)
         {
-            return _ctx.airPlaneManager
-            .GetAll()
-            .FirstOrDefault(ap => ap.Type == airplaneType, new AirPlane());
+            throw new NotImplementedException();
         }
 
         public AirPlane GetAirplaneToFlight(Flight flight)
         {
-            var result = _ctx.airPlaneManager
-            .GetAll()
-            .Where(airPlane => flight.DistanceKM / airPlane.MaxSpeed * airPlane.FuelWeightKgUsage1H < (airPlane.FuelWeightKgTankCapacity * (1 - AirPlane.LandingFuelReserve)))
-            .OrderBy(airPlane => flight.DistanceKM / airPlane.MaxSpeed * airPlane.FuelWeightKgUsage1H);
-            return result.FirstOrDefault();
+            throw new NotImplementedException();
+        }
+
+        public List<AirPort> GetAirport(string value)
+        {
+            throw new NotImplementedException();
+        }
+
+        public AirPort GetAirport(AirPortCode airportCode)
+        {
+            throw new NotImplementedException();
         }
 
         public List<Flight> GetAllFlights()
         {
-            return _ctx.flightsManager.GetAll();
+            throw new NotImplementedException();
+        }
+
+        public List<Flight> GetFlight(FlightSearchDto flightSearchDto)
+        {
+            throw new NotImplementedException();
         }
     }
 }
